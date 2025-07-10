@@ -1,30 +1,48 @@
-# Sistema Bancário v3
+# Sistema Bancário em Python
 
-O "Sistema Bancário v3" é um projeto de sistema bancário desenvolvido em Python. Ele permite realizar operações bancárias básicas, como depósito, saque e consulta de saldo.
+Este é um projeto de sistema bancário orientado a objetos desenvolvido em Python.  
+Ele implementa um sistema simples de contas bancárias com suporte a depósitos, saques, criação de clientes e contas, além de um histórico de transações.
 
 ## Funcionalidades
 
-- Cadastro de clientes
-- Depósito de dinheiro
-- Saque de dinheiro
-- Consulta de saldo
-- Listagem de transações
+- Cadastro de Clientes (Pessoa Física)
+- Criação de Contas Correntes
+- Depósitos e Saques com histórico
+- Extrato de transações
+- Regras de saque: limite de valor e quantidade diária
+- Histórico completo de transações
+- Menu de navegação interativo via terminal
 
 ## Estrutura do Projeto
 
-O projeto está organizado da seguinte forma:
-Sistema_bancario_v3/ 
-#### ├── README.md
-#### ├── main.py
-#### ├── cliente.py
-#### ├── conta.py
-#### └── transacao.py
+- `Conta`: Classe base com operações de depósito e saque
+- `Conta_corrente`: Classe que herda de `Conta`, adiciona limites
+- `Cliente` e `Pessoa_Fisica`: Representam os usuários
+- `Transacao`, `Deposito`, `Saque`: Interface e implementações das transações
+- `Historico`: Armazena as movimentações realizadas
+- Funções auxiliares: menu, cadastro, depósito, saque, extrato, etc
 
-- `README.md`: Este arquivo de documentação.
-- `main.py`: O arquivo principal que executa o sistema bancário.
-- `cliente.py`: Módulo que define a classe `Cliente` e suas funcionalidades.
-- `conta.py`: Módulo que define a classe `Conta` e suas funcionalidades.
-- `transacao.py`: Módulo que define a classe `Transacao` e suas funcionalidades.
+## Conceitos Utilizados
+
+- Programação Orientada a Objetos (POO)
+- Herança, Encapsulamento, Polimorfismo e Abstração
+- Interface com `abc.ABC`
+- Composição de objetos (`Conta` possui um `Historico`)
+- Boas práticas de código e separação de responsabilidades
+
+## Requisitos
+
+- Python 3.10 ou superior (recomendado)
+
+## Como Executar
+
+Clone o repositório e execute o script:
+
+```bash
+git clone https://github.com/seu-usuario/sistema-bancario.git
+cd sistema-bancario
+python sistema_bancario.py
+
 
 ## Como Executar o Projeto
 
